@@ -1,14 +1,6 @@
 import streamlit as st 
 import requests 
-from streamlit_lottie import st_lottie
 from PIL import Image 
-
-# funcion wea de animacion de lottie
-def load_lottieurl(url):
-  r = requests.get(url)
-  if r.status_code != 200:
-    return None #si la solicitud no está disponible
-  return r.json()
 
 lottie_coding = load_lottieurl("https://lottie.host/622dd294-8daf-4b01-b724-2afe598896f2/OpsEJSLUwN.json")
 img_ctci = Image.open("/content/Marca-CTCI.png")
